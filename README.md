@@ -6,7 +6,7 @@ A secure, RESTful backend API for a **digital wallet system**, built with **Node
 
 ## 🌐 Live Deployment
 
-🔗 [API Base URL (Render)](https://digital-wallet-api.onrender.com/api/v1)
+🔗 [API Base URL (Render)](https://digital-wallet-api-1qp3.onrender.com)
 
 ---
 
