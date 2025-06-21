@@ -1,0 +1,17 @@
+# Node dependencies
+node_modules/
+.env
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# OS and Editor junk
+.DS_Store
+*.swp
+*.swo
+
+# Optional: dist/build folders if you're compiling
+dist/
+build/
