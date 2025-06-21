@@ -62,7 +62,7 @@ router.post('/pay' , auth , async(req , res) => {
 
         //Recipient Not Found Check
         if(!recipient){
-            return res.status(400).json({error:"No such user exists"})
+            return res.status(400).json({error:"insufficient funds  or recipient doesn't exist"})
         }
         //User & Recipient Same Check
         if(sender.username === recipient.username){
@@ -71,7 +71,7 @@ router.post('/pay' , auth , async(req , res) => {
         //Getting Sender Balance
         const senderBal = Number(sender.balance);
         if(senderBal < amt){
-            return res.status(400).json({error:"Insufficient balance"});
+            return res.status(400).json({error:"insufficient funds  or recipient doesn't exist"});
         }
 
         //Transaction START
