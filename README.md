@@ -37,31 +37,19 @@ A secure, RESTful backend API for a **digital wallet system**, built with **Node
 
 ---
 
-## 🗂️ Project Structure
+## 🗂️ Routes
 
-digital-wallet-api/
-├── app.js                      # Main entry point
-├── .env                        # Environment variables (not committed)
-├── .gitignore                  # Ignore node_modules, .env etc.
-├── package.json                # Project metadata and dependencies
-├── README.md                   # Project documentation
 
-├── db/
-│   └── db.js                   # NeonDB SQL client setup
-
-├── middleware/
-│   └── auth.js                 # Basic Authentication middleware
-
-├── routes/
-│   ├── auth.js                 # /register route
-│   ├── wallet.js               # /fund, /pay, /bal, /stmt routes
-│   └── product.js              # /product and /product/buy routes
-
-├── utils/
-│   └── currency.js             # External API logic for currency conversion
-
-└── public/                     # (Optional) static files, if ever needed
-
+| Method | Endpoint                   | Auth | Description                     |
+| ------ | -------------------------- | ---- | ------------------------------- |
+| POST   | `/register`                | ❌    | Register a new user             |
+| POST   | `/fund`                    | ✅    | Add money to wallet             |
+| POST   | `/pay`                     | ✅    | Pay another user                |
+| GET    | `/bal?currency=USD`        | ✅    | Check balance in given currency |
+| GET    | `/stmt`                    | ✅    | Get transaction history         |
+| POST   | `/product`                 | ✅    | Add a product                   |
+| GET    | `/product`                 | ❌    | List all products               |
+| POST   | `/product/buy`             | ✅    | Buy a product                   |
 
 
 ---
@@ -89,14 +77,6 @@ API_KEY=your_currencyapi_key
 #Start the server
 nodemon app.js
 
+---
 
-| Method | Endpoint                   | Auth | Description                     |
-| ------ | -------------------------- | ---- | ------------------------------- |
-| POST   | `/register`                | ❌    | Register a new user             |
-| POST   | `/fund`                    | ✅    | Add money to wallet             |
-| POST   | `/pay`                     | ✅    | Pay another user                |
-| GET    | `/bal?currency=USD`        | ✅    | Check balance in given currency |
-| GET    | `/stmt`                    | ✅    | Get transaction history         |
-| POST   | `/product`                 | ✅    | Add a product                   |
-| GET    | `/product`                 | ❌    | List all products               |
-| POST   | `/product/buy`             | ✅    | Buy a product                   |
+
