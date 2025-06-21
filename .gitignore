@@ -12,6 +12,3 @@ npm-debug.log*
 *.swp
 *.swo
 
-# Optional: dist/build folders if you're compiling
-dist/
-build/
